@@ -10,7 +10,7 @@
 #include <hardware/i2c.h>
 #include <pico/binary_info/code.h> // bi_decl
 
-void make_lcd(lcd_t * lcd, uint8_t addr, uint8_t cols, uint8_t rows, uint8_t sda_pin, uint8_t scl_pin) {
+void lcd_make(lcd_t * lcd, uint8_t addr, uint8_t cols, uint8_t rows, uint8_t sda_pin, uint8_t scl_pin) {
   lcd->addr = addr;
   lcd->cols = cols;
   lcd->rows = rows;
@@ -27,12 +27,12 @@ void make_lcd(lcd_t * lcd, uint8_t addr, uint8_t cols, uint8_t rows, uint8_t sda
 
   // make I2C pins avaiable to picotools
   // bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
-  init_lcd(lcd);
+  lcd_init(lcd);
   lcd_clear(lcd);
   lcd_home(lcd);
 }
 
-void init_lcd(lcd_t * lcd) {
+void lcd_init(lcd_t * lcd) {
   lcd->dpy_mode = LCD_ENTRY_LEFT | LCD_ENTRY_SHIFT_DECREMENT;
   lcd->dpy_func = LCD_MODE_4_BIT | LCD_LINE_2 | LCD_DOTS_5x8;
   lcd->dpy_ctrl = LCD_DISPLAY_ON | LCD_CURSOR_ON | LCD_BLINK_OFF;
