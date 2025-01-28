@@ -26,9 +26,9 @@ Use the following snippet to be up and running.
 #include "lcd.h"
 
 lcd_t _lcd, * lcd;
-lcd = &_lcd;
 
 void setup() {
+  lcd = &_lcd;
   // lcd_make(&_lcd, 0x27, 16, 2, 4, 5); <-- regular ptr_address also works
   lcd_make(lcd, 0x27, 16, 2, 4, 5);
 }
