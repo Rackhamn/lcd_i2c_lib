@@ -130,8 +130,8 @@ typedef struct lcd_s lcd_t;
   lcd_write_byte((lcdp), (val), LCD_COMMAND)
 
 // TODO: add status return
-void make_lcd(lcd_t * lcd, uint8_t addr, uint8_t cols, uint8_t rows, uint8_t sda_pin, uint8_t scl_pin);
-void init_lcd(lcd_t * lcd);
+void lcd_make(lcd_t * lcd, uint8_t addr, uint8_t cols, uint8_t rows, uint8_t sda_pin, uint8_t scl_pin);
+void lcd_init(lcd_t * lcd);
 
 // these could prob be defines
 void lcd_i2c_write_byte(lcd_t * lcd, uint8_t val);
