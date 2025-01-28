@@ -25,7 +25,7 @@ Use the following snippet to be up and running.
 ```c 
 #include "lcd.h"
 
-lcd_s _lcd, *lcd;
+lcd_t _lcd, * lcd;
 lcd = &_lcd;
 
 void setup() {
