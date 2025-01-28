@@ -31,7 +31,7 @@ void setup() {
   lcd = &_lcd;
   // ptr, address, columns, rows, sda_pin, scl_pin
   // lcd_make(&_lcd, 0x27, 16, 2, 4, 5); <-- regular ptr_address also works
-  lcd_make(lcd, 0x27, 16, 2, 4, 5);
+  lcd_make(lcd, 0x27, 16, 2, LCD_SDA, LCD_SCL);
 }
 
 void loop() {
