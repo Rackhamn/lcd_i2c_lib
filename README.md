@@ -2,7 +2,7 @@
 A small I2C lcd library for interfacing with the 1602IIC from Tinsharp (TC1602B-01) on the Raspberry Pico (RP2040)
 
 The interface is C-style pointer to struct passed to functions.  
-To use this you just have to include the .h and .c in the same folder as your arduino sketch.  
+To use this you just have to include the .h and .c in the same folder as your code (or for arduino_ex, in the same folder as your arduino sketch).  
 8 custom characters can be built and written out.
 They can always be overwritten.
 ```c
